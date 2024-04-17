@@ -1,4 +1,4 @@
-.navbar-inverse {
+﻿.navbar-inverse {
     background-color: #156388;
     border-color: #156388;
     margin-top: 5px;
@@ -66,4 +66,10 @@
 .info:hover {
     text-decoration: none;
     color: #fff;
+}
+/*nút giỏ hàng*/
+.search-form {
+    display: flex; /* Sử dụng flexbox để căn lề giữa */
+    /* justify-content: center; */ /* Căn giữa theo chiều ngang */
+   /* align-items: center;*/ /* Căn giữa theo chiều dọc */
 }

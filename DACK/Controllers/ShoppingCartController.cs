@@ -81,4 +81,28 @@ public IActionResult Index()
         return await _productRepository.GetByIdAsync(productId);
 
     }
+    [HttpPost]
+    public IActionResult RemoveFromCart(int productId)
+    {
+        // Lấy giỏ hàng từ Session
+        var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
+
+        // Kiểm tra xem giỏ hàng có tồn tại không
+        if (cart != null)
+        {
+            // Tìm sản phẩm cần xóa trong giỏ hàng dựa vào productId được truyền từ form
+            var itemToRemove = cart.Items.FirstOrDefault(item => item.ProductId == productId);
+
+            // Nếu tìm thấy sản phẩm, xóa nó khỏi giỏ hàng
+            if (itemToRemove != null)
+            {
+                cart.Items.Remove(itemToRemove);
+                // Lưu lại giỏ hàng vào Session
+                HttpContext.Session.SetObjectAsJson("Cart", cart);
+            }
+        }
+
+        // Chuyển hướng người dùng trở lại trang giỏ hàng sau khi xóa sản phẩm
+        return RedirectToAction("Index");
+    }
 }

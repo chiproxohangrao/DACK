@@ -2,7 +2,52 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* Reset CSS cho cả trang */
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; /* Chọn một font chữ dễ đọc */
+            background-color: #dee2e6; /* Màu nền cho trang */
+        }
+
+        /* Đảm bảo phần tử body có background chiếm toàn bộ màn hình */
+        body {
+            background: url('../images/home1.jpg') no-repeat center center fixed;
+            /* Các thuộc tính bổ sung có thể điều chỉnh cách hình ảnh hiển thị, ví dụ như lặp lại, căn chỉnh, kích thước, và mờ dần. */
+            /* background-size: cover; */ /* Phù hợp với kích thước cửa sổ trình duyệt */
+        }
+
+        /* Style cho phần header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Màu nền semi-transparent */
+        }
+
+        /* Style cho tiêu đề trang */
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333; /* Màu chữ đậm */
+        }
+
+        /* Style cho nội dung trung tâm */
+        .content {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SHOP THỜI TRANG DACK</h1>
+    </header>
+</body>
+</html>
