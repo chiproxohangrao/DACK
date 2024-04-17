@@ -56,12 +56,6 @@
     width: 100%;
 }
 
-.container-footer {
-    background-color: #156388;
-    color: #fff;
-    padding-bottom: 15px;
-}
-
 .info,
 .info:hover {
     text-decoration: none;
@@ -73,3 +67,11 @@
     /* justify-content: center; */ /* Căn giữa theo chiều ngang */
    /* align-items: center;*/ /* Căn giữa theo chiều dọc */
 }
+/*footer*/
+.footer {
+    border: 2px solid #000000; /* Đường viền đậm hơn */
+    padding: 20px; /* Khoảng cách giữa nội dung và đường viền */
+}
+/*dao diện product*/
+
+

@@ -1,8 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +7,7 @@
     <style>
         /* Reset CSS cho cả trang */
         html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif; /* Chọn một font chữ dễ đọc */
@@ -19,9 +16,9 @@
 
         /* Đảm bảo phần tử body có background chiếm toàn bộ màn hình */
         body {
-            background: url('../images/home1.jpg') no-repeat center center fixed;
-            /* Các thuộc tính bổ sung có thể điều chỉnh cách hình ảnh hiển thị, ví dụ như lặp lại, căn chỉnh, kích thước, và mờ dần. */
-            /* background-size: cover; */ /* Phù hợp với kích thước cửa sổ trình duyệt */
+           /*  background: url('../images/home1.jpg') */ /* no-repeat center center fixed */;
+            background-size: cover; /* Phù hợp với kích thước cửa sổ trình duyệt */
+            overflow-y: auto; /* Cho phép cuộn xuống trang web khi nội dung vượt quá kích thước của cửa sổ trình duyệt */
         }
 
         /* Style cho phần header */
@@ -43,11 +40,46 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        /* Style cho phần tử bao bọc nội dung */
+        .container {
+            min-height: 100%; /* Đảm bảo phần tử bao bọc có chiều cao ít nhất bằng chiều cao của cửa sổ trình duyệt */
+            box-sizing: border-box; /* Tính cả padding và border vào chiều cao */
+            padding-bottom: 50px; /* Đảm bảo phần tử bao bọc có đủ khoảng trống dưới cùng để không bị che khuất bởi phần tử cuộn */
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>SHOP THỜI TRANG DACK</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>SHOP THỜI TRANG DACK</h1>
+        </header>
+        <!-- Nội dung trang web ở đây -->
+        <img src="../images/home1.jpg" style="max-width: 100%; height: auto;">
+        <img src="../images/home2.jpg" style="max-width: 100%; height: auto;">
+    </div>
 </body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li>Email: example@example.com</li>
+                    <li>Điện thoại: 0123 456 789</li>
+                    <li>Địa chỉ: 123 Đường ABC, Thành phố XYZ</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <!-- Phần nội dung khác (nếu có) -->
+            </div>
+            <div class="col-md-4">
+                <!-- Phần nội dung khác (nếu có) -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </html>
