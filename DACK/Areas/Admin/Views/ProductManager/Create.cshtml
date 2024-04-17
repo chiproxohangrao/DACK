@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<a asp-area="Admin" asp-controller="ProductManager" asp-action="Create">Thêm sản phẩm</a>
+<h1>Create</h1>
 
 <h4>Product</h4>
 <hr />
@@ -27,27 +27,27 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            @* <div class="form-group">
+@*             <div class="form-group">
                 <label asp-for="ImageUrl" class="control-label"></label>
                 <input asp-for="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div> *@
-            <div class="form-group">
-                <label asp-for="ImageUrl">Product Image</label>
-                <input type="file" asp-for="ImageUrl" class="form-control" />
-            </div>
+@*             <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div> *@
             <div class="form-group">
                 <label asp-for="CategoryId">Category</label>
                 <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
             </div>
-            @* <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
-            </div> *@
-            <button type="submit" class="btn btn-primary">Add</button>
- @*            <div class="form-group">
+            <div class="form-group">
+                <label asp-for="ImageUrl">Product Image</label>
+                <input type="file" asp-for="ImageUrl" class="form-control" />
+            </div>
+@*             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div> *@
+            <button type="submit" class="btn btn-primary">Add</button>
         </form>
     </div>
 </div>
