@@ -56,9 +56,14 @@
                     @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
-                    <a asp-action="Display" asp-route-id="@item.Id"><button class="btn btn-primary">View</button></a> |
-                    <a asp-action="Update" asp-route-id="@item.Id"><button class="btn btn-warning">Edit</button></a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id"><button class="btn btn-danger">Delete</button></a>
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="productId" value="@item.Id" />
+                        <label for="quantity">Số lượng:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" />
+                        <button class="btn btn-info" type="submit">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </form>
                 </td>
             </tr>
         }

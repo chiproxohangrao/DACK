@@ -7,10 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DACK.Models;
 using DACK.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DACK.Controllers
 
 {
+    [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class CategoriesControllerManager : Controller
     {
         private readonly IProductRepository _productRepository;
