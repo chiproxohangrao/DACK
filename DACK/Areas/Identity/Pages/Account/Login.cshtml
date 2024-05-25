@@ -1,4 +1,4 @@
-﻿@page
+﻿@* @page
 @model LoginModel
 
 @{
@@ -80,6 +80,83 @@
     </div>
 </div>
 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+ *@
+ @page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1 class="heading"> <span>Đăng Nhập </span> Tài Khoản </h1>
+
+<div class="container3">
+    <form id="account" method="post">
+        <div class="content">
+
+            <!-- layout right -->
+            <div class="layout_right">
+                <div class="layout-img">
+                    <img src="~/images/vector1.png" alt="" class="img" />
+                </div>
+            </div>
+            <!-- layout left -->
+            <div class="layout-left">
+                <h2>Đăng Nhập</h2>
+                <div class="content_text">
+                    <h3>Email</h3>
+                    <h3>Mật Khẩu</h3>
+                </div>
+
+                <div class="content_input">
+
+                    <input asp-for="Input.Email" class="text " autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    @*    <label asp-for="Input.Email" >Email</label> *@
+
+
+                    <input asp-for="Input.Password" class="text" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    @*  <label asp-for="Input.Password" >Password</label> *@
+
+
+                    @*     <input type="text" id="email" name="email" class="btn" />
+                    <input type="text" id="password" name="password" class="btn" /> *@
+                </div>
+
+                <div class="login">
+                    <button type="submit" class="btn">Đăng Nhập</button>
+                </div>
+                <div class="support">
+                    <div class="forpassword">
+                        @* <input type="checkbox" class="checkbox" /> *@
+
+                        @*     <label asp-for="Input.RememberMe" > *@
+                        <input class="remeber" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+
+                        @*
+                        <label for="" class="remeber">Ghi nhớ mật khẩu</label> *@
+
+                        <a asp-page="./ForgotPassword" for="">Quên mật khẩu</a>
+                    </div>
+                    <!-- Horizontal lines and span -->
+                    <div class="hr-container">
+                        <hr class="middle-hr" />
+                        <span class="createpassword-span">Hoặc</span>
+                        <hr class="middle-hr" />
+                    </div>
+                    <div class="createpassword">
+                        <a asp-page="./Register" for=""> chưa có tài khoản?</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

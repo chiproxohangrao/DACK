@@ -1,11 +1,10 @@
 ﻿<h2>Giỏ hàng của bạn</h2>
 <table>
     <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Total</th>
-        <th></th>
+        <th>Sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Giá tiền</th>
+        <th>Tổng cộng</th>
     </tr>
     @foreach (var item in Model.Items)
     {
@@ -17,7 +16,7 @@
             <td>
                 <form asp-controller="ShoppingCart" asp-action="RemoveFromCart" method="post">
                     <input type="hidden" name="productId" value="@item.ProductId" />
-                    <button type="submit" class="btn btn-danger">Remove</button>
+                    <button type="submit" class="btn btn-danger">Xóa</button>
                 </form>
             </td>
         </tr>

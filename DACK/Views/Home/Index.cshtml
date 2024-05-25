@@ -1,120 +1,144 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <style>
-        /* Reset CSS cho cả trang */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif; /* Chọn một font chữ dễ đọc */
-            background-color: #dee2e6;
-            /* Màu nền cho trang */
-        }
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
 
-        /* Đảm bảo phần tử body có background chiếm toàn bộ màn hình */
-        body {
-           /*  background: url('../images/home1.jpg') */ /* no-repeat center center fixed */;
-            background-size: cover; /* Phù hợp với kích thước cửa sổ trình duyệt */
-            overflow-y: auto; /* Cho phép cuộn xuống trang web khi nội dung vượt quá kích thước của cửa sổ trình duyệt */
-        }
-
-        /* Style cho phần header */
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Màu nền semi-transparent */
-        }
-
-        /* Style cho tiêu đề trang */
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #333; /* Màu chữ đậm */
-        }
-
-        /* Style cho nội dung trung tâm */
-        .content {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Style cho phần tử bao bọc nội dung */
-        .container {
-            min-height: 100%; /* Đảm bảo phần tử bao bọc có chiều cao ít nhất bằng chiều cao của cửa sổ trình duyệt */
-            box-sizing: border-box; /* Tính cả padding và border vào chiều cao */
-            padding-bottom: 50px; /* Đảm bảo phần tử bao bọc có đủ khoảng trống dưới cùng để không bị che khuất bởi phần tử cuộn */
-        }
-    </style>
-    <style>
-        p {
-            margin-top: 20px;
-            font-size: 16px;9u
-            line-height: 1.6; /* Độ cao dòng */
-            margin-bottom: 20px;
-            text-indent: 20px;
-        }
-        h2 {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
 <body>
-    <div class="container">
-        <header>
-            <h1>SHOP THỜI TRANG DACK</h1>
-        </header>
-        <!-- Nội dung trang web ở đây -->
-        <img src="../images/home1.jpg" style="max-width: 100%; height: auto;">
-        <img src="../images/home2.jpg" style="max-width: 100%; height: auto;">
-        <img src="../images/home3.jpg" style="max-width: 100%; height: auto;">
-        <h2>
-            Thời trang nam 4.0: Sau "ăn ngon, mặc đẹp" sẽ là "ăn sạch, mặc xanh"
-        </h2>
-        <p>
-            Trước đây đã từng có rất nhiều quan niệm "mặc đẹp" khác nhau của nam giới.
-            Có những người cho rằng chỉ cần chọn những sản phẩm thời trang có thương hiệu là có thể giúp cho việc mặc đồ trở nên đẹp hơn.
-            Nhưng điều này không hẳn đúng.
-        </p>
-        <p>
-            Để làm được điều đó trước tiên người nam giới phải hiểu được bản thân mình, hiểu rõ về hoàn cảnh nơi mình sẽ xuất hiện.
-            Khi nam giới hiểu rõ về hai yếu tố đó sẽ có những cách kết hợp trang phục phù hợp với hoàn cảnh và bản thân.
-            Sự phù hợp sẽ giúp nam giới cảm thấy tự tin hơn.
-        </p>
-        <p>
-            Có những người rất yêu thích phong cách thời trang thanh lịch với những màu đơn sắc tối giản. 
-            Nhưng bên cạnh đó cũng có những người đàn ông thích thể hiện cá tính thông qua kiểu dáng, cách phối màu trên trang phục.
-            Làm thế nào để người đàn ông định hình phong cách cá nhân thông qua thời trang? 
-            Cuộc cách mạng thời trang xanh là gì và ứng dụng của thời trang xanh trong các thiết kế đồ nam?...
-        </p>
-        
-    </div>
-</body>
+    <section class="home" id="home">
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Liên hệ</h3>
-                <ul>
-                    <li>Email: example@example.com</li>
-                    <li>Điện thoại: 0123 456 789</li>
-                    <li>Địa chỉ: 123 Đường ABC, Thành phố XYZ</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <!-- Phần nội dung khác (nếu có) -->
-            </div>
-            <div class="col-md-4">
-                <!-- Phần nội dung khác (nếu có) -->
-            </div>
+        <div class="content">
+            <h3>Hạnh phúc là hương vị của tiệm bánh</h3>
+            <a asp-controller="Product" asp-action="Index" class="btn">Đặt ngay</a>
         </div>
-    </div>
-</footer>
+    </section>
+    <section class="about" id="about">
+        <h1 class="heading"> <span>Giới thiệu</span> về chúng tôi </h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/about-img.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Điều Gì Làm Cho Tiệm Bánh Của Chúng Tôi Trở Nên Đặc Biệt?</h3>
+                <p>Cake Bakery được ra đời với thông điệp mang đam mê của chúng tôi gửi gắm đến bạn qua những chiếc bánh ngọt và thức uống ngon, giá rẻ, vệ sinh và chất lượng luôn được đặt lên hàng đầu. Sự ra đời của mỗi chiếc bánh đều được chọn lọc kỹ lưỡng tâm huyết của đội ngũ chúng tôi từ khâu nguyên liệu, chế biến để khi đến tay của các bạn, chúng đều trở thành sản phẩm hoàn hảo nhất</p>
+                <p>Với không gian đẹp, yên tĩnh, Tiệm Bánh Xinh thích hợp là nơi để bạn có thể thư giãn sau những giờ học tập và làm việc mệt mỏi.</p>
+                <a href="#" class="btn">Tìm hiểu thêm</a>
+            </div>
 
+        </div>
 
-</html>
+    </section>
+    <section class="review" id="review">
+
+        <h1 class="heading"> <span>Đánh giá</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Tiệm bánh này là nơi yêu thích của tôi! Bánh kem luôn tươi mới và ngon lành, và nhân viên rất thân thiện và nhiệt tình. Tôi đã mua bánh ở đây nhiều lần và chưa bao giờ thất vọng.</p>
+                <img src="images/pic-2.png" class="user" alt="">
+                <h3>Lan Anh N.. </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Bánh kem tại đây thật sự là một tuyệt tác! Tôi đã thưởng thức nhiều loại bánh ở đây và tất cả đều ngon từng miếng. Đặc biệt, tôi rất ấn tượng với sự chuyên nghiệp và tận tâm của nhân viên.</p>
+                <img src="images/pic-1.png" class="user" alt="">
+                <h3>Anh Tuấn Đ.</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Bánh kem ở đây không chỉ ngon mà còn đẹp mắt! Tôi đã đặt bánh cho bữa tiệc sinh nhật của con trai và mọi người đều khen ngợi không ngớt về hương vị và thiết kế của bánh. Cảm ơn tiệm!</p>
+                <img src="images/pic-3.png" class="user" alt="">
+                <h3>Minh H.</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> <span>Bài viết</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/blog-1.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Khám phá Hương vị Thú vị của Bánh Cup</a>
+                    <span>by admin / 14st july, 2022</span>
+                    <p>Bạn đã bao giờ thưởng thức một chiếc bánh nhỏ xinh, đầy màu sắc và hương vị đa dạng chưa? Nếu chưa, thì bánh cup chắc chắn là một trải nghiệm tuyệt vời mà bạn không nên bỏ lỡ...</p>
+                    <a href="#" class="btn">đọc thêm</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/blog-2.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Xu hướng tặng bánh sinh nhật hiện nay</a>
+                    <span>by admin / 20st may, 2021</span>
+                    <p>Nếu trước đây bánh kem sinh nhật truyền thống là một phần không thể thiếu của mỗi bữa tiệc thì hiện nay, có rất nhiều mẫu bánh độc đáo để bạn có thể lựa chọn trong những dịp đặc biệt...</p>
+                    <a href="#" class="btn">đọc thêm</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/blog-3.png" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Bánh tình yêu Tiramisu là gì?</a>
+                    <span>by admin / 14st december, 2021</span>
+                    <p>gày nay nền ẩm thực ngày càng phát triển, nhiều loại bánh được sáng tạo ra nhằm đáp ứng nhu cầu ăn uống đa dạng của đông đảo người yêu...</p>
+                    <a href="#" class="btn">đọc thêm</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>Liên hệ</span> </h1>
+        <h2 class="info">
+            SDT:0123456789<br />
+            Email:ngyenvana@gmail.com<br />
+            Địa chỉ:HCM
+        </h2>
+    </section>
+    <section class="footer">
+        <div class="links">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">chúng tôi</a>
+            <a href="#review">đánh giá</a>
+            <a href="./Product/Index">sản phẩm</a>
+            <a href="#blogs">bài viết</a>
+        </div>
+    </section>
+</body>

@@ -1,4 +1,6 @@
-﻿namespace DACK.Models
+﻿
+namespace DACK.Models
+
 {
     public class Order
     {

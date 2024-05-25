@@ -105,7 +105,397 @@
             font-size: 1.5rem;
             padding: .5rem 0;
         }
+/*trang home*/
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    font-size: 4rem;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.0rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+    .btn:hover {
+        letter-spacing: .2rem;
+    }
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/service.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    .home .content {
+        max-width: 60rem;
+    }
+        .home .content h3 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #808080;
+    --border: .1rem solid rgba(255,255,255,.3);
+}
+.about .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+}
+
+    .about .row .image {
+        flex: 1 1 50%;
+    }
+
+        .about .row .image img {
+            width: 100%;
+        }
+
+    .about .row .content {
+        flex: 1 1 50%;
+        padding: 2rem;
+    }
+
+        .about .row .content h3 {
+            font-size: 2rem;
+            color: #fff;
+        }
+        .about .row .content span {
+            font-size: 1.0rem;
+            color: #ccc;
+            padding: 1rem 0;
+            line-height: 1.8;
+        }
+        .about .row .content p {
+            font-size: 1.0rem;
+            color: #ccc;
+            padding: 1rem 0;
+            line-height: 1.8;
+        }
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    font-size: 4rem;
+}
+
+    .heading span {
+        color: var(--main-color);
+        text-transform: uppercase;
+    }
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+    .review .box-container .box {
+        border: var(--border);
+        text-align: center;
+        padding: 3rem 2rem;
+
+    }
+
+        .review .box-container .box p {
+            font-size: 1.0rem;
+            line-height: 1.8;
+            color: #ccc;
+            padding: 2rem 0;
+        }
+
+        .review .box-container .box .user {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review .box-container .box h3 {
+            padding: 1rem 0;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .review .box-container .box .stars i {
+            font-size: 1.5rem;
+            color: var(--main-color);
+        }
+section {
+    margin-bottom: 100px; /* Khoảng cách giữa các section */
+}
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+    .blogs .box-container .box {
+        border: var(--border);
+    }
+
+        .blogs .box-container .box .image {
+            height: 30rem;
+            overflow: hidden;
+            width: 100%;
+        }
+
+            .blogs .box-container .box .image img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+
+        /* .blogs .box-container .box:hover .image img {
+            transform: scale(1.2);
+        }*/
+
+        .blogs .box-container .box .content {
+            padding: 2rem;
+        }
+
+            .blogs .box-container .box .content .title {
+                font-size: 1.0rem;
+                line-height: 1.5;
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .blogs .box-container .box .content .title:hover {
+                    color: var(--main-color);
+                }
+
+            .blogs .box-container .box .content span {
+                color: var(--main-color);
+                display: block;
+                padding-top: 1rem;
+                font-size: 2rem;
+            }
+
+            .blogs .box-container .box .content p {
+                font-size: 1.0rem;
+                line-height: 1.8;
+                color: #ccc;
+                padding: 1rem 0;
+            }
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+    .footer .links a {
+        padding: .7rem 2rem;
+        color: #fff;
+        border: var(--border);
+        font-size: 2rem;
+    }
+
+        .footer .links a:hover {
+            background: var(--main-color);
+        }
+.contact .info {
+    color: #fff;
+}
 
 
+.container3 {
+    display: flex;
+    min-width: 1230px;
+    height: 100vh;
+    justify-content: center;
+}
 
+    .container3 .content {
+        background-color: rgba( 255, 255, 255, 0.8 ); /* Màu trắng mờ với độ trong suốt 80% */
+        border-radius: 10px;
+        max-width: 600px; /* Độ rộng tối đa của phông nền */
+        width: 100%; /* Chiều rộng 100% */
+        min-height: 400px;
+        display: flex;
+    }
 
+    .container3 .layout_right {
+        width: 40%;
+        height: 100%;
+    }
+
+    .container3 .layout-img {
+        width: 231px;
+        height: 400px;
+    }
+
+        .container3 .layout-img .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .container3 .layout-left {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .container3 .layout-left h2 {
+            display: flex;
+            padding: 10px 0;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .container3 .layout-left .content_text {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .container3 .layout-left h3 {
+            text-align: center;
+            position: relative;
+            margin: 0 30.5px 1px 0;
+            display: inline-block;
+            width: 242.5px;
+            overflow-wrap: break-word;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .container3 .layout-left .content_input {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .container3 .layout-left .content_input .text {
+                padding-left: 10px;
+                border-radius: 10px;
+                background: #d9d9d9;
+                margin: 0px 0px 15px 15px;
+                width: 320px;
+                height: 35px;
+            }
+
+        .container3 .layout-left .login .btn {
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 30px;
+            background: rgba(73, 158, 21, 0.72);
+            position: relative;
+            margin: 0px 0px 5px 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            width: 320px;
+            box-sizing: border-box;
+        }
+
+        .container3 .layout-left .forpassword {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow-wrap: break-word;
+            font-family: "Inter";
+            font-weight: 400;
+            padding: 0px 15px;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .container3 .layout-left .remeber {
+            margin-right: -42px;
+        }
+
+        .container3 .layout-left .support {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container3 .layout-left .hr-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-wrap: break-word;
+            font-family: "Inter";
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+.container4 {
+    max-width: 700px;
+    width: 100%;
+    margin-left: 290px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+    .container4 .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+
+        .container4 .title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: #9b59b6;
+    }

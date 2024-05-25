@@ -3,50 +3,36 @@
 @{
     ViewData["Title"] = "Index";
 }
-<style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif; /* Chọn một font chữ dễ đọc */
-        background-color: #dee2e6; /* Màu nền cho trang */
-    }
-</style>
+<tbody>
+    <section class="menu" id="menu">
+        <div class="box-container">
+            @foreach (var product in Model)
+            {
+                <div class="box">
 
-<h1>SẢN PHẨM</h1>
-
-<table class="table">
-    <tbody>
-        <section class="menu" id="menu">
-            <div class="box-container">
-                @foreach (var product in Model)
-                {
-                    <div class="box">
-
-                        @if (product.ImageUrl != null)
-                        {
-                            <img src="@product.ImageUrl" />
-                        }
-                        <h3>@product.Name </h3>
-                        <div class="price">
-                            Giá Sản Phẩm: @product.Price VND
-                        </div>
-                        <p>Mô Tả Sản Phẩm: @product.Description</p>
-                        <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
-                            <input type="hidden" name="productId" value="@product.Id" />
-                            <label for="quantity">Số lượng:</label>
-                            <input type="number" id="quantity" name="quantity"
-                                   value="1" min="1" />
-                            <button class="btn btn-info" type="submit">
-                                Thêm vào giỏ hàng
-                            </button>
-                        </form>
-                        <div class="pr">
-                            <a asp-action="Display" asp-route-id="@product.Id" class="btn ">Xem chi tiết </a>
-                        </div>
+                    @if (product.ImageUrl != null)
+                    {
+                        <img src="@product.ImageUrl" />
+                    }
+                    <h3>@product.Name </h3>
+                    <div class="price">
+                        Giá Sản Phẩm: @product.Price VND
                     </div>
-                }
-            </div>
-        </section>
-    </tbody>
-</table>
+                    <p>Mô Tả Sản Phẩm: @product.Description</p>
+                    <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="productId" value="@product.Id" />
+                        <label for="quantity">Số lượng:</label>
+                        <input type="number" id="quantity" name="quantity"
+                               value="1" min="1" />
+                        <button class="btn btn-info" type="submit">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </form>
+                    <div class="pr">
+                        <a asp-action="Display" asp-route-id="@product.Id" class="btn ">Xem chi tiết </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+</tbody>

@@ -8,12 +8,22 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DACK.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #808080; /* Thay thế bằng màu nền bạn muốn */
+        }
+    </style>
+
+
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DACK</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="@(Url.Content("~/images/logo1.png"))" alt="Icon" style="height: 40px; width:auto;">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,20 +36,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Sản Phẩm</a>
                         </li>
-@*                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Loại</a>
-                        </li> *@
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <div class="search-form">
-                            <input type="search" id="search-box" placeholder="Tìm ở đây...">
+                        @*<li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Loại</a>
+                        </li>*@
+                        @*<li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>*@
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <div class="search-form me-3">
+                            <input type="search" id="search-box" placeholder="Tìm ở đây..." class="form-control">
                             <label for="search-box" class="fas fa-search"></label>
                         </div>
-                    </ul>
-                    <partial name="_LoginPartial" />
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
+
+
         </nav>
     </header>
     <div class="container">
