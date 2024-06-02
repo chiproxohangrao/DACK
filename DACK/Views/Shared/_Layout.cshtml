@@ -8,17 +8,10 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DACK.styles.css" asp-append-version="true" />
-    <style>
-        body {
-            background-color: #808080; /* Thay thế bằng màu nền bạn muốn */
-        }
-    </style>
-
-
 </head>
 <body>
 
-    <header>
+  @*   <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
@@ -36,18 +29,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Sản Phẩm</a>
                         </li>
-                        @*<li class="nav-item">
+                        <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Loại</a>
-                        </li>*@
-                        @*<li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>*@
-                    </ul>
-                    <div class="d-flex align-items-center">
-                        <div class="search-form me-3">
+                        </li>
+                        <li class="search-form me-3">
                             <input type="search" id="search-box" placeholder="Tìm ở đây..." class="form-control">
                             <label for="search-box" class="fas fa-search"></label>
-                        </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
                         <partial name="_LoginPartial" />
                     </div>
                 </div>
@@ -55,7 +48,8 @@
 
 
         </nav>
-    </header>
+    </header> *@
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

@@ -45,11 +45,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Category.Name)
             </td>
-            <td>               
-                <a asp-action="Display" asp-route-id="@item.Id">Xem chi tiết</a> |
-                <a asp-action="Update" asp-route-id="@item.Id">Sửa</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
-            </td>
+                <td>
+                    <a asp-action="Display" asp-route-id="@item.Id" style="display: inline;">Xem chi tiết</a> |
+                    <a asp-action="Update" asp-route-id="@item.Id" style="display: inline;">Sửa</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="display: inline;">Xóa</a>
+                </td>
+
         </tr>
 }
     </tbody>

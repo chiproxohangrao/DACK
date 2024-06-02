@@ -88,10 +88,14 @@
 <h1 class="heading"> <span>Đăng Ký  </span> Tài Khoản </h1>
 
 <div class="container4">
-    <div class="title">Đăng Ký</div>
-    <div class="content">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <div class="user-details">
+    <form id="account" method="post">
+        <div class="content">
+            <div class="layout_right">
+                <div class="layout-img">
+                    <img src="~/images/o6.png" alt="" class="img" />
+                </div>
+            </div>
+            <div class="layout-left">
                 <div class="input-box">
                     <span class="details">Email</span>
                     <input asp-for="Input.Email" type="email" placeholder="Enter your email" required />
@@ -119,10 +123,13 @@
                     </select>
                     <span asp-validation-for="Input.Role" class="text-danger"></span>
                 </div>
+                    <div class="button">
+                        <input type="submit" value="Đăng Ký" />
+                    </div>
+                </form>
             </div>
-            <div class="button">
-                <input type="submit" value="Đăng Ký" />
-            </div>
-        </form>
-    </div>
+            
+        </div>
+    
+   
 </div>

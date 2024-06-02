@@ -1,0 +1,17 @@
+﻿@model DACK.Models.Product
+
+@{
+    ViewData["Title"] = "Display";
+}
+<class displayproduct>
+    <h2>@Model.Name</h2>
+    <div>
+        <h3>Giá: @Model.Price VND</h3>
+        <p>@Model.Description</p>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Model.ImageUrl" alt="Product Image" style="max-width: 1200px;" />
+        }
+    </div>
+    <a asp-action="Index" class="btn btn-info">Trở về</a>
+</class>
