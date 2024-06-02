@@ -776,6 +776,22 @@ form .input-box span.details {
     .user-details .input-box input:valid {
         border-color: #9b59b6;
     }
+.container10 {
+    background-color: rgba(161, 109, 14, 1);
+    /*min-width: 1230px;*/
+    height: 100vh;
+/*    justify-content: center;
+    display: flex;
+    align-items: center;*/
+}
+.container11 {
+    background-color: rgba(161, 109, 14, 1);
+    height: 100vh;
+}
+.container12 {
+    background-color: rgba(161, 109, 14, 1);
+    height: 100vh;
+}
 /*sản phẩm-------------------------------------------------------------------------------------------------------------------------*/
 .menu .box-container {
     display: grid;
