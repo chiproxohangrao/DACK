@@ -105,4 +105,9 @@ public IActionResult Index()
         // Chuyển hướng người dùng trở lại trang giỏ hàng sau khi xóa sản phẩm
         return RedirectToAction("Index");
     }
+    [Authorize]
+    public IActionResult PaymentCallBack()
+    {
+        return View();
+    }
 }
