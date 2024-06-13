@@ -166,7 +166,7 @@
                                     <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
                                         <input type="hidden" name="productId" value="@product.Id" />
                                         <label for="quantity">Số lượng:</label>
-                                        <input type="number" id="quantity" name="quantity"
+                                        <input type="number" class="small-input" id="quantity" name="quantity"
                                                value="1" min="1" />
                                         <button class="btn btn-info" type="submit">
                                             Thêm vào giỏ hàng
